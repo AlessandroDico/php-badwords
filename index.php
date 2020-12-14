@@ -17,6 +17,8 @@
 
         <p> <?php echo $finalParagraph ?> </p>
 
+        <!-- la lunghezza del paragrafo originale è data dalla somma dei caratteri e degli spazi.. ovviamente cambia a seconda della parola inserita nella queryString -->
+        <p> il paragrafo originale è lungo <?php echo strlen($paragraph) ?> caratteri </p>
 
     </body>
 </html>
