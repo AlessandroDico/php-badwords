@@ -6,7 +6,12 @@
     // $paragraph = "la parola censurata è " . $censored . ", quindi non dovresti leggere la parola " . $censored . "!";
     $paragraph = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.";
 
-    $finalParagraph = str_replace($censored, '***', $paragraph);
+
+    // $finalParagraph = str_replace($censored, '***', $paragraph);
+
+    //per fare in modo che il replace non sia case sensitive posso usare str_ireplace
+    //in questo modo se nella query o nel testo la parola combacia ma una hanno maiuscole o minuscole differenti str_ireplace non ne tiene conto
+    $finalParagraph = str_ireplace($censored, '***', $paragraph);
 ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
